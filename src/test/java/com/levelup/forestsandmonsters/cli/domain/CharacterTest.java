@@ -37,4 +37,16 @@ public class CharacterTest {
         assertEquals(expectedY, initialPosition.getYCoordinates());
     }
 
+    @Test
+    public void testInitializeRandomStartingPosition(){
+        int expectedX = 5;
+        int expectedY = 4;
+        Character testObject = new Character("John Doe", new Position(5, 4));
+        
+        Position initialPosition = testObject.getPosition();
+        
+        assertEquals(expectedX, initialPosition.getXCoordinates());
+        assertEquals(expectedY, initialPosition.getYCoordinates());
+    }
+
 }

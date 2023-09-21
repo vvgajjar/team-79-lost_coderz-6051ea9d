@@ -15,6 +15,10 @@ public class Character {
         this.name = name; 
         currentPosition = new Position(0, 0);
     }
+    public Character(String name, Position randomPosition) {
+        this.name = name; 
+        currentPosition = randomPosition;
+    }
 
     public String getName() {
         return name;

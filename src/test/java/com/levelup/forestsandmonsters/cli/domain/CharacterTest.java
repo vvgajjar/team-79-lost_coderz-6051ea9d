@@ -18,4 +18,11 @@ public class CharacterTest {
         String defaultName = testObj.getName();
         assertEquals("Lost Coderz", defaultName);
     }
+
+    @Test
+    public void testCharacterName(){
+        Character testObj = new Character("John Doe");
+        String actualName = testObj.getName();
+        assertEquals("John Doe", actualName);
+    }
 }

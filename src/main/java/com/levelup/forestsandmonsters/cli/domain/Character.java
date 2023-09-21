@@ -1,5 +1,7 @@
 package com.levelup.forestsandmonsters.cli.domain;
 
+import java.util.Random;
+
 public class Character {
 
     public static String DEFAULT_NAME = "Lost Coderz";
@@ -30,6 +32,14 @@ public class Character {
 
     public Position getPosition() {
         return currentPosition;
+    }
+
+    public void initializeStartingPosition(){
+        Random rand = new Random();
+        int rand_intX = rand.nextInt(10);
+        int rand_intY = rand.nextInt(10);
+
+        this.currentPosition = new Position(rand_intX,rand_intY);
     }
 
 }

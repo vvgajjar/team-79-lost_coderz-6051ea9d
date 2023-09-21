@@ -2,7 +2,8 @@ package com.levelup.forestsandmonsters.cli.domain;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CharacterTest {
     
@@ -38,7 +39,7 @@ public class CharacterTest {
     }
 
     @Test
-    public void testInitializeRandomStartingPosition(){
+    public void testInitializeDefaultStartingPosition(){
         int expectedX = 5;
         int expectedY = 4;
         Character testObject = new Character("John Doe", new Position(5, 4));
@@ -47,6 +48,19 @@ public class CharacterTest {
         
         assertEquals(expectedX, initialPosition.getXCoordinates());
         assertEquals(expectedY, initialPosition.getYCoordinates());
+    }
+
+    @Test
+    public void testInitializeRandomStartingPosition(){
+        Character testObject = new Character("John Doe");
+
+        testObject.initializeStartingPosition();
+        Position initialPosition = testObject.getPosition();
+
+        assertTrue(initialPosition.getXCoordinates() >=0 );
+        assertTrue(initialPosition.getXCoordinates() < 10 );
+        assertTrue(initialPosition.getYCoordinates() >=0 );
+        assertTrue(initialPosition.getYCoordinates() < 10 );
     }
 
 }

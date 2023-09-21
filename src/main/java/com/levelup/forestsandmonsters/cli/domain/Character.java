@@ -2,20 +2,25 @@ package com.levelup.forestsandmonsters.cli.domain;
 
 import java.util.Random;
 
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
+
 public class Character {
 
     public static String DEFAULT_NAME = "Lost Coderz";
     private String name;
     private Position currentPosition;
+    private Map map;
 
-    public Character(){
+    public Character(Map map){
         name = DEFAULT_NAME;
         currentPosition = new Position(0, 0);
+        this.map = map;
     }
 
-    public Character(String name) {
+    public Character(String name, Map map) {
         this.name = name; 
         currentPosition = new Position(0, 0);
+        this.map = map;
     }
     public Character(String name, Position randomPosition) {
         this.name = name; 
@@ -42,4 +47,7 @@ public class Character {
         this.currentPosition = new Position(rand_intX,rand_intY);
     }
 
+    public void move(DIRECTION move){
+        
+    }
 }

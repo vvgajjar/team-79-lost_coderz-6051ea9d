@@ -9,27 +9,27 @@ public class CharacterTest {
     
     @Test
     public void initializeCharacter() {
-        Character testObj = new Character();
+        Character testObj = new Character(new FakeMap());
         assertNotNull(testObj);
     }
 
     @Test
     public void testDefaultCharacterName(){
-        Character testObj = new Character();
+        Character testObj = new Character(new FakeMap());
         String defaultName = testObj.getName();
         assertEquals("Lost Coderz", defaultName);
     }
 
     @Test
     public void testCharacterName(){
-        Character testObj = new Character("John Doe");
+        Character testObj = new Character("John Doe", new FakeMap());
         String actualName = testObj.getName();
         assertEquals("John Doe", actualName);
     }
 
      @Test
     public void testDefatultStartingPosition(){
-        Character testObject = new Character("John Doe");
+        Character testObject = new Character("John Doe", new FakeMap());
         int expectedX = 0;
         int expectedY = 0;
         Position initialPosition = testObject.getPosition();
@@ -52,7 +52,7 @@ public class CharacterTest {
 
     @Test
     public void testInitializeRandomStartingPosition(){
-        Character testObject = new Character("John Doe");
+        Character testObject = new Character("John Doe", new FakeMap());
 
         testObject.initializeStartingPosition();
         Position initialPosition;

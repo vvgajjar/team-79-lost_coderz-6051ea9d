@@ -55,12 +55,16 @@ public class CharacterTest {
         Character testObject = new Character("John Doe");
 
         testObject.initializeStartingPosition();
-        Position initialPosition = testObject.getPosition();
+        Position initialPosition;
+        
+        for(int i=0; i<10; i++){
+            initialPosition = testObject.getPosition();
 
-        assertTrue(initialPosition.getXCoordinates() >=0 );
-        assertTrue(initialPosition.getXCoordinates() < 10 );
-        assertTrue(initialPosition.getYCoordinates() >=0 );
-        assertTrue(initialPosition.getYCoordinates() < 10 );
+            assertTrue(initialPosition.getXCoordinates() >=0 );
+            assertTrue(initialPosition.getXCoordinates() < 10 );
+            assertTrue(initialPosition.getYCoordinates() >=0 );
+            assertTrue(initialPosition.getYCoordinates() < 10 );
+        }
     }
 
 }

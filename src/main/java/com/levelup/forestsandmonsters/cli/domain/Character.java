@@ -4,13 +4,16 @@ public class Character {
 
     public static String DEFAULT_NAME = "Lost Coderz";
     private String name;
+    private Position currentPosition;
 
     public Character(){
         name = DEFAULT_NAME;
+        currentPosition = new Position(0, 0);
     }
 
     public Character(String name) {
         this.name = name; 
+        currentPosition = new Position(0, 0);
     }
 
     public String getName() {
@@ -21,5 +24,8 @@ public class Character {
         this.name = name;
     }
 
+    public Position getPosition() {
+        return currentPosition;
+    }
 
 }

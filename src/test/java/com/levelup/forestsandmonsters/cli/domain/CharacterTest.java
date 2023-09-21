@@ -25,4 +25,16 @@ public class CharacterTest {
         String actualName = testObj.getName();
         assertEquals("John Doe", actualName);
     }
+
+     @Test
+    public void testDefatultStartingPosition(){
+        Character testObject = new Character("John Doe");
+        int expectedX = 0;
+        int expectedY = 0;
+        Position initialPosition = testObject.getPosition();
+        
+        assertEquals(expectedX, initialPosition.getXCoordinates());
+        assertEquals(expectedY, initialPosition.getYCoordinates());
+    }
+
 }

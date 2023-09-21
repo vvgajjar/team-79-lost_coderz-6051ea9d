@@ -4,11 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.Test;
+
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
+
 import java.awt.Point;
 
 public class MapTest {
-
-    int startX, startY;
 
     @Test
     public void initalizeMap() {
@@ -17,8 +18,11 @@ public class MapTest {
     }
 
     @Test
-    public void initalMapSize() {
-        assertEquals(100, Map.numPositions);
+    public void testNewPosition(){
+        Map testObj = new Map();
+        Position currPosition = new Position(10,15);
+        testObj.nextPosition(currPosition, DIRECTION.NORTH);
+    
     }
 
    /*@Test

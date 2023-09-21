@@ -8,7 +8,7 @@ import java.awt.Point;
 
 public class MapTest {
 
-
+    int startX, startY;
 
     @Test
     public void initalizeMap() {
@@ -21,9 +21,9 @@ public class MapTest {
         assertEquals(100, Map.numPositions);
     }
 
-   @Test
+   /*@Test
     public void getMapPosition() {
-        ass
-    }    
+        Map.getMapPosition(new Point(this.startX, this.startY));
+    }   */ 
 
 }

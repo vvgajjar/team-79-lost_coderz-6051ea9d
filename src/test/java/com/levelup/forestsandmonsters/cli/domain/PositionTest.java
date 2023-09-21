@@ -8,11 +8,21 @@ import org.junit.Test;
 import java.awt.Point;
 
 public class PositionTest {
-    int mapPostions;
+    int xCoordinates,yCoordinates;
 
     @Test
-    public void initalizeMap() {
-        Map testObj = new Map();
+    public void initalizePosition() {
+        Position testObj = new Position(xCoordinates,yCoordinates);
         assertNotNull(testObj);
+        
     }
+    @Test
+    public void testXPosition(){
+        xCoordinates = 10;
+        Position testObj = new Position(xCoordinates, yCoordinates);
+        assertEquals(10, testObj.getXCoordinates());
+
+    }
+
+
 }

@@ -10,10 +10,10 @@ public class Position {
         location = new Point(xCoordinates, yCoordinates);
     }
 
-    public int getXCoordinates(int xCoordinates){
+    public int getXCoordinates(){
         return location.x;
     }
-     public int getYCoordinates(int yCoordinates){
+     public int getYCoordinates(){
         return location.y;
     }
      

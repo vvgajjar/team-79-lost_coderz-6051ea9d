@@ -17,12 +17,12 @@ public class Position {
         return location.y;
     }
      
-    public void setXCoordinates(int xCoordinates){
-
+    public int setXCoordinates(int xCoordinates){
+        return xCoordinates;
     }
 
-     public void setYCoordinates(int yCoordinates){
-
+     public int setYCoordinates(int yCoordinates){
+        return yCoordinates;
     }
 
 }

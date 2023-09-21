@@ -23,6 +23,25 @@ public class PositionTest {
         assertEquals(10, testObj.getXCoordinates());
 
     }
+     @Test
+    public void testyPosition(){
+        yCoordinates = 10;
+        Position testObj = new Position(xCoordinates, yCoordinates);
+        assertEquals(10, testObj.getYCoordinates());
+
+    }
+     @Test
+    public void testSetXPosition(){
+        
+        Position testObj = new Position(xCoordinates, yCoordinates);
+        assertEquals(10, testObj.setXCoordinates(10));
+    }
+     @Test
+     public void testSetYPosition(){
+        
+        Position testObj = new Position(xCoordinates, yCoordinates);
+        assertEquals(10, testObj.setYCoordinates(10));
+    }
 
 
 }

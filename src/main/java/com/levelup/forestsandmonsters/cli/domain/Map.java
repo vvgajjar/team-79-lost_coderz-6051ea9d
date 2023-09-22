@@ -40,7 +40,7 @@ public class Map {
                 if(xPos==9){
                 newPosition.setXCoordinates(xPos);
                 }else{
-                yPos = xPos+1;                    
+                xPos = xPos+1;                    
                 newPosition.setXCoordinates(xPos);
                 }
         }

@@ -43,7 +43,7 @@ public class LevelUpGame implements Quit.Command {
     // TODO: Update this prompt. Also, do you want to get the game status and tell
     // the character where their character is?
     System.out.println("Welcome to DEEP SPACE EXPLORER!!!!");
-    System.out.println("You have woken up from cryosleep DEEP in space.\n Misson: Find Earth or DIE!!!");
+    System.out.println("You have woken up from cryosleep DEEP in space.\nMisson: Find Earth or DIE!!!");
     System.out.println(" /\\/\\/\\                            /  \\\n" + //
         "| \\  / |                         /      \\\n" + //
         "|  \\/  |                       /          \\\n" + //

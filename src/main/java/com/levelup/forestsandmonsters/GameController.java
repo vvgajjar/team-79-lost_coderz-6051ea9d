@@ -17,8 +17,8 @@ public class GameController {
         public Point currentPosition = null;
         public int moveCount = 0;
 
-        public void setCurrentPosition(int x, int y){
-            this.currentPosition = new Point(x, y);
+        public void setCurrentPosition(){
+            this.currentPosition = new Point(character.getPosition().getXCoordinates(), character.getPosition().getYCoordinates());
         }
     }
 
@@ -55,16 +55,17 @@ public class GameController {
     }
 
     public void move(DIRECTION directionToMove) {
-        // TODO: Implement move - should call something on another class
+        // Implement move - should call something on another class
         status.character.move(directionToMove);
-        status.setCurrentPosition(status.character.getPosition().getXCoordinates(), status.character.getPosition().getYCoordinates());
-        // TODO: Should probably also update the game results
+        status.setCurrentPosition();
+        // Should probably also update the game results
+        status.moveCount++;
     }
 
     public void setCharacterPosition(Point coordinates) {
         status.character.getPosition().setXCoordinates(coordinates.x);
         status.character.getPosition().setYCoordinates(coordinates.y);
-        status.setCurrentPosition(status.character.getPosition().getXCoordinates(), status.character.getPosition().getYCoordinates());
+        status.setCurrentPosition();
     }
 
     public void setCurrentMoveCount(int moveCount) {

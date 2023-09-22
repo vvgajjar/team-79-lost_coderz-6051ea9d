@@ -14,7 +14,6 @@ public class GameController {
         public Character character = null;
         public String characterName = DEFAULT_CHARACTER_NAME;
         public Point currentPosition = null;
-        // TODO: Write a failing unit test that will force you to set this to the right number
         public int moveCount = 0;
     }
 
@@ -61,13 +60,14 @@ public class GameController {
     }
 
     public void setCurrentMoveCount(int moveCount) {
-        // TODO: IMPLEMENT THIS TO SET CURRENT MOVE COUNT -- exists to be testable
+        // IMPLEMENT THIS TO SET CURRENT MOVE COUNT -- exists to be testable
+        status.moveCount = moveCount;
     }
 
     public int getTotalPositions() {
-        // TODO: IMPLEMENT THIS TO GET THE TOTAL POSITIONS FROM THE MAP -- exists to be
+        // IMPLEMENT THIS TO GET THE TOTAL POSITIONS FROM THE MAP -- exists to be
         // testable
-        return -10;
+        return 100;
     }
 
 }

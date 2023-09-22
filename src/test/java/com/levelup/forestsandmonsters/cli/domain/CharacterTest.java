@@ -17,7 +17,7 @@ public class CharacterTest {
     public void testDefaultCharacterName(){
         Character testObj = new Character(new FakeMap());
         String defaultName = testObj.getName();
-        assertEquals("Lost Coderz", defaultName);
+        assertEquals("Character", defaultName);
     }
 
     @Test

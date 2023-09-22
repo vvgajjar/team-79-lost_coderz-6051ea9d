@@ -6,7 +6,7 @@ import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 public class Character {
 
-    public static String DEFAULT_NAME = "Lost Coderz";
+    public static String DEFAULT_NAME = "Character";
     private String name;
     private Position currentPosition;
     private Map map;

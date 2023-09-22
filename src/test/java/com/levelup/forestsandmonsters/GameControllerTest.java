@@ -16,7 +16,7 @@ public class GameControllerTest {
     public void testCreateDefaultCharacter() {
         GameController testObj = new GameController();
         testObj.createCharacter(null);
-        assertEquals("Lost Coderz", testObj.status.characterName);
+        assertEquals("Character", testObj.status.characterName);
         
     }
 

@@ -1,7 +1,4 @@
 package com.levelup.forestsandmonsters.cli.domain;
-
-import java.awt.Point;
-
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 public class Map {  
@@ -11,30 +8,48 @@ public class Map {
     int yRange = 10;
   }
     public Position nextPosition(Position currentPosition, DIRECTION move){
+        Position newPosition = new Position(currentPosition.getXCoordinates(),currentPosition.getYCoordinates());
         int xPos = currentPosition.getXCoordinates();
         int yPos = currentPosition.getYCoordinates();
-        int checkX=0;
-        int checkY=0;
-        Position newPosition = new Position(checkX, checkY);
         if(move == DIRECTION.NORTH || move == DIRECTION.SOUTH ){
             if(move == DIRECTION.NORTH ){
-                checkY = yPos-1;
+                if(yPos==0){
+                newPosition.setYCoordinates(yPos);
+                }else{
+                yPos = yPos-1;                    
+                newPosition.setYCoordinates(yPos);
+                }
             }else{
-                checkY = yPos+1;
+                if(yPos==9){
+                newPosition.setYCoordinates(yPos);
+                }else{
+                yPos = yPos+1;                    
+                newPosition.setYCoordinates(yPos);
+                }
             }
         }else{
             {
-            if(move == DIRECTION.EAST ){
-                checkX = xPos+1;
+            if(move == DIRECTION.WEST ){
+                if(xPos==0){
+                newPosition.setXCoordinates(xPos);
+                }else{
+                xPos = xPos-1;                    
+                newPosition.setXCoordinates(xPos);
+                }
             }else{
-                checkX = xPos-1;
-            }
+                if(xPos==9){
+                newPosition.setXCoordinates(xPos);
+                }else{
+                yPos = xPos+1;                    
+                newPosition.setXCoordinates(xPos);
+                }
         }
-        }
-        int newX= newPosition.setXCoordinates(checkX);
-        int newY =newPosition.setYCoordinates(checkY);
-
-        return nextPosition(newPosition, move);
     }
-
+        
+}
+     //System.out.println(xPos);
+      //  System.out.println(yPos);
+        return newPosition;
+   
+    }
 }

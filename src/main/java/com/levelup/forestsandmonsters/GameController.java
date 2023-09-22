@@ -20,6 +20,10 @@ public class GameController {
         public void setCurrentPosition(){
             this.currentPosition = new Point(character.getPosition().getXCoordinates(), character.getPosition().getYCoordinates());
         }
+
+        public String toString(){
+            return "Hey " + characterName +", you have moved "+ moveCount+ " times.";
+        }
     }
 
     GameStatus status;

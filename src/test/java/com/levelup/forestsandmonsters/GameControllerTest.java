@@ -51,15 +51,13 @@ public class GameControllerTest {
     @Test
     public void getGameStatus(){
         GameController testObj = new GameController();
-        testObj.status.character = new Character("John", new FakeMap());
+        testObj.status.character = new Character(new FakeMap());
         testObj.status.character.initializeStartingPosition();
         testObj.status.setCurrentPosition();
-        System.out.println(testObj.status.currentPosition.x);
-        System.out.println(testObj.status.currentPosition.y);
         testObj.move(DIRECTION.SOUTH);
-        System.out.println("***********************************");
-        System.out.println(testObj.status.currentPosition.x);
-        System.out.println(testObj.status.currentPosition.y);
+        testObj.move(DIRECTION.EAST);
+        System.out.println("Hey " + testObj.status.characterName + ", you have moved " + testObj.status.moveCount + " times.");
+        assertEquals("Hey Character, you have moved 2 times.", testObj.status.toString());
     }
     
 

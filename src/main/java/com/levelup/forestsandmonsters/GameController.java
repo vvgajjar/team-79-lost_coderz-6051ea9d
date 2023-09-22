@@ -4,6 +4,7 @@ import java.awt.Point;
 
 import com.levelup.forestsandmonsters.cli.domain.Character;
 import com.levelup.forestsandmonsters.cli.domain.Map;
+import com.levelup.forestsandmonsters.cli.domain.Position;
 
 public class GameController {
 
@@ -15,6 +16,10 @@ public class GameController {
         public String characterName = DEFAULT_CHARACTER_NAME;
         public Point currentPosition = null;
         public int moveCount = 0;
+
+        public void setCurrentPosition(int x, int y){
+            this.currentPosition = new Point(x, y);
+        }
     }
 
     GameStatus status;
@@ -51,12 +56,15 @@ public class GameController {
 
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
+        status.character.move(directionToMove);
+        status.setCurrentPosition(status.character.getPosition().getXCoordinates(), status.character.getPosition().getYCoordinates());
         // TODO: Should probably also update the game results
     }
 
     public void setCharacterPosition(Point coordinates) {
         status.character.getPosition().setXCoordinates(coordinates.x);
         status.character.getPosition().setYCoordinates(coordinates.y);
+        status.setCurrentPosition(status.character.getPosition().getXCoordinates(), status.character.getPosition().getYCoordinates());
     }
 
     public void setCurrentMoveCount(int moveCount) {

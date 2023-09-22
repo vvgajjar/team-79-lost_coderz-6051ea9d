@@ -5,6 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
+import com.levelup.forestsandmonsters.cli.domain.Character;
+import com.levelup.forestsandmonsters.cli.domain.FakeMap;
+
 public class GameControllerTest {
     @Test
     public void initializationCreatesResults() {
@@ -35,6 +39,14 @@ public class GameControllerTest {
         
     }
 
+    @Test
+    public void testUPMove(){
+        GameController testObj = new GameController();
+        testObj.status.character = new Character("John", new FakeMap());
+        testObj.move(DIRECTION.NORTH);
+        assertEquals(3, testObj.status.currentPosition.x);
+        assertEquals(4, testObj.status.currentPosition.y);
+    }
     
 
 }

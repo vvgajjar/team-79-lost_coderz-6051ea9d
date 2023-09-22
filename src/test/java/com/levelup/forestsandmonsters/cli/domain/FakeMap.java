@@ -14,7 +14,7 @@ public class FakeMap extends Map {
         } else if(move.equals(DIRECTION.WEST)){
             return new Position(2, 2);
         }if(move.equals(DIRECTION.NORTH)){
-            return new Position(3, 3);
+            return new Position(3, 4);
         }else 
             return new Position(4, 4);
         

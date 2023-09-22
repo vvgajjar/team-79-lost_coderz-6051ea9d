@@ -4,7 +4,6 @@ import java.awt.Point;
 
 import com.levelup.forestsandmonsters.cli.domain.Character;
 import com.levelup.forestsandmonsters.cli.domain.Map;
-import com.levelup.forestsandmonsters.cli.domain.Position;
 
 public class GameController {
 
@@ -12,9 +11,9 @@ public class GameController {
 
     public class GameStatus {
         // TODO: Add other status data
-        public Character character = null;
+        public Character character = new Character(DEFAULT_CHARACTER_NAME, new Map());
         public String characterName = DEFAULT_CHARACTER_NAME;
-        public Point currentPosition = null;
+        public Point currentPosition = new Point(character.getPosition().getXCoordinates(), character.getPosition().getYCoordinates());
         public int moveCount = 0;
 
         public void setCurrentPosition(){

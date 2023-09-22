@@ -18,11 +18,13 @@ public class Position {
     }
      
     public int setXCoordinates(int xCoordinates){
-        return xCoordinates;
+        location.x = xCoordinates;
+        return location.x;
     }
 
      public int setYCoordinates(int yCoordinates){
-        return yCoordinates;
+        location.y=yCoordinates;
+        return location.y;
     }
 
 }

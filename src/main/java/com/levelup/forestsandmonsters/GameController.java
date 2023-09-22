@@ -66,6 +66,14 @@ public class GameController {
         status.moveCount++;
     }
 
+    public void createNewStatus(){
+        GameStatus newStatus = new GameStatus();
+        newStatus.characterName = this.status.characterName;
+        newStatus.currentPosition = this.status.currentPosition;
+        newStatus.character = this.status.character;
+        this.status = newStatus;
+    }
+
     public void setCharacterPosition(Point coordinates) {
         status.character.getPosition().setXCoordinates(coordinates.x);
         status.character.getPosition().setYCoordinates(coordinates.y);

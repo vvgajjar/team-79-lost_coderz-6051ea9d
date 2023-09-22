@@ -21,7 +21,7 @@ public class GameController {
         }
 
         public String toString(){
-            return "Hey " + characterName +", you have moved to position (x, y): (" + currentPosition.x + ", " + currentPosition.y + ")";
+            return "Hey " + characterName +", your move " + moveCount + " was to position (x, y): (" + currentPosition.x + ", " + currentPosition.y + ")";    
         }
     }
 
@@ -70,6 +70,7 @@ public class GameController {
         newStatus.characterName = this.status.characterName;
         newStatus.currentPosition = this.status.currentPosition;
         newStatus.character = this.status.character;
+        newStatus.moveCount = status.moveCount;
         this.status = newStatus;
     }
 

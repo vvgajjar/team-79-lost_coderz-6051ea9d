@@ -15,7 +15,7 @@ public class GameController {
         public String characterName = DEFAULT_CHARACTER_NAME;
         public Point currentPosition = null;
         // TODO: Write a failing unit test that will force you to set this to the right number
-        public int moveCount = -100;
+        public int moveCount = 0;
     }
 
     GameStatus status;

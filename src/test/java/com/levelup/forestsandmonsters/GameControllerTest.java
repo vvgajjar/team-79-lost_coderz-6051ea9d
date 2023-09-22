@@ -28,4 +28,13 @@ public class GameControllerTest {
         
     }
 
+    @Test
+    public void testInitialMoveCount() {
+        GameController testObj = new GameController();
+        assertEquals(0, testObj.status.moveCount);
+        
+    }
+
+    
+
 }

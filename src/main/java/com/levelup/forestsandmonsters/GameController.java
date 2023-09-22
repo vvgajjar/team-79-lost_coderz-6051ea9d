@@ -22,7 +22,7 @@ public class GameController {
         }
 
         public String toString(){
-            return "Hey " + characterName +", you have moved "+ moveCount+ " times.";
+            return "Hey " + characterName +", you have moved to position (x, y): (" + currentPosition.x + ", " + currentPosition.y + ")";
         }
     }
 

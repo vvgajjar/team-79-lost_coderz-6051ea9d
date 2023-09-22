@@ -48,6 +48,6 @@ public class Character {
     }
 
     public void move(DIRECTION move){
-        map.nextPosition(this.currentPosition, move);        
+        this.currentPosition = map.nextPosition(this.currentPosition, move);        
     }
 }
